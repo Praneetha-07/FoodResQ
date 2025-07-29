@@ -101,4 +101,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Example:
   // fetchTotalFoodSaved();
   // fetchDonorsSummary();
+  document.querySelectorAll("[data-target]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const section = document.getElementById(btn.dataset.target);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
 });

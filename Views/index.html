@@ -9,7 +9,13 @@
   <body>
     <header id="main-header">
       <div class="container">
-        <a href="/" class="logo">Foodresq</a>
+        <a href="/" class="logo">
+          <img
+            src="/images/logo-com.jpg"
+            alt="FoodResQ Logo"
+            class="logo-img"
+          />Foodresq</a
+        >
         <nav class="main-nav">
           <button
             id="nav-register-vol-btn"
@@ -23,14 +29,14 @@
             class="nav-button"
             onclick="window.location.href='/login'"
           >
-            Login
+            Login (Donor/Volunteer)
           </button>
           <button
             id="nav-register-btn"
             class="nav-button"
             onclick="window.location.href='/register'"
           >
-            Register
+            Register as Donor
           </button>
           <button id="nav-aboutUs-btn" class="nav-button">About Us</button>
           <button id="nav-dashboard-btn" class="nav-button">Dashboard</button>
@@ -92,7 +98,7 @@
       class="content-section"
       style="display: none"
     >
-      <div class="container text-center">
+      <div class="container text-center footer-line">
         <h2 class="features-h2" style="text-align: center">
           Community Impact Dashboard
         </h2>
@@ -118,35 +124,6 @@
         <p>&copy; 2025 FoodResQ. All rights reserved.</p>
       </div>
     </footer>
-
-    <!-- <script>
-      document
-        .getElementById("nav-aboutUs-btn")
-        .addEventListener("click", function () {
-          const aboutSection = document.getElementById("about-section");
-          const homeSection = document.getElementById("home-section");
-          const dashboardSection = document.getElementById("dashboard-section");
-
-          homeSection.style.display = "none";
-          dashboardSection.style.display = "none";
-          aboutSection.style.display = "block";
-
-          aboutSection.scrollIntoView({ behavior: "smooth" });
-        });
-      document
-        .getElementById("nav-dashboard-btn")
-        .addEventListener("click", function () {
-          const aboutSection = document.getElementById("about-section");
-          const homeSection = document.getElementById("home-section");
-          const dashboardSection = document.getElementById("dashboard-section");
-
-          homeSection.style.display = "none";
-          dashboardSection.style.display = "block";
-          aboutSection.style.display = "none";
-
-          aboutSection.scrollIntoView({ behavior: "smooth" });
-        });
-    </script> -->
 
     <script
       async
