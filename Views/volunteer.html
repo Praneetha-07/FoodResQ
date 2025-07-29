@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volunteer Dashboard - FoodResQ</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="volun-donor-header">
+      <nav class="volun-donor-nav">
+        <button class="nav-button-vol-donor" data-target="available">
+          Available Donations
+        </button>
+        <button class="nav-button-vol-donor" data-target="assigned">
+          My Pickups
+        </button>
+        <button class="nav-button-vol-donor" data-target="impact">
+          My Impact
+        </button>
+        <button class="nav-button-vol-donor" data-target="profile">
+          Profile
+        </button>
+        <button class="nav-button-vol-donor" id="logout-btn">Logout</button>
+      </nav>
+    </header>
+
+    <h1
+      style="
+        text-align: center;
+        font-style: italic;
+        color: rgb(105, 105, 164);
+        font-size: 50px;
+      "
+    >
+      Welcome, Volunteer!<br />😇
+    </h1>
+
+    <main class="volun-donor--main">
+      <section id="available" class="volun-donor-sec">
+        <h2 class="features-h2">Available Donations</h2>
+        <div id="donationList"></div>
+      </section>
+
+      <section id="assigned" class="volun-donor-sec">
+        <h2 class="features-h2">My Assigned Pickups</h2>
+        <div id="assignedList"></div>
+      </section>
+
+      <section id="impact" class="volun-donor-sec">
+        <h2 class="features-h2">My Impact</h2>
+        <div id="impactList">
+          <p>Total Pickups Completed: <span id="pickupCount">0</span></p>
+          <p>Total Food Rescued: <span id="foodSaved">0</span> kg</p>
+        </div>
+      </section>
+
+      <section id="profile" class="volun-donor-sec">
+        <h2 class="features-h2">My Profile</h2>
+        <form id="volunteerForm">
+          <div class="form-group">
+            <label for="volProfileName">Name:</label>
+            <input type="text" id="volProfileName" name="name" />
+          </div>
+          <div class="form-group">
+            <label for="volProfileEmail">Email:</label>
+            <input type="email" id="volProfileEmail" name="email" readonly />
+          </div>
+          <div class="form-group">
+            <label for="volProfilePhone">Phone Number:</label>
+            <input type="tel" id="volProfilePhone" name="phoneNumber" />
+          </div>
+          <div class="form-group">
+            <label for="volProfileAddress">Address:</label>
+            <input type="text" id="volProfileAddress" name="address" />
+          </div>
+          <div class="form-group">
+            <label for="volProfileGender">Gender:</label>
+            <select id="volProfileGender" name="gender">
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="volProfileDob">Date of Birth:</label>
+            <input type="date" id="volProfileDob" name="dob" />
+          </div>
+          <div class="form-group">
+            <label for="volProfileStudy">Study/Occupation:</label>
+            <input type="text" id="volProfileStudy" name="studyOccupation" />
+          </div>
+          <div class="form-group">
+            <label for="volProfilePreferredLocation">Preferred Location:</label>
+            <input
+              type="text"
+              id="volProfilePreferredLocation"
+              name="preferredLocation"
+            />
+          </div>
+          <button type="submit" class="submit-btn">Update Profile</button>
+        </form>
+      </section>
+    </main>
+
+    <footer id="main-footer">
+      <div class="container">
+        <p>&copy; 2025 FoodResQ. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/javascript/vol-dashboard.js"></script>
+  </body>
+</html>

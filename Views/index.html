@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodResQ</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="container">
+        <a href="/" class="logo">Foodresq</a>
+        <nav class="main-nav">
+          <button
+            id="nav-register-vol-btn"
+            class="nav-button"
+            onclick="window.location.href='/volunteer'"
+          >
+            Join as Volunteer
+          </button>
+          <button
+            id="nav-login-btn"
+            class="nav-button"
+            onclick="window.location.href='/login'"
+          >
+            Login
+          </button>
+          <button
+            id="nav-register-btn"
+            class="nav-button"
+            onclick="window.location.href='/register'"
+          >
+            Register
+          </button>
+          <button id="nav-aboutUs-btn" class="nav-button">About Us</button>
+          <button id="nav-dashboard-btn" class="nav-button">Dashboard</button>
+          <button id="nav-logout-btn" class="nav-button" style="display: none">
+            Logout
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="app-container">
+      <section id="home-section" class="content-section">
+        <div class="container text-center">
+          <h1 style="font-size: xx-large">Welcome to FoodResQ! 🍎🌍</h1>
+          <img src="/images/logo.jpg" class="image" />
+          <p class="lead">
+            Fighting food waste and hunger, one donation at a time.
+          </p>
+          <p>
+            FoodResQ is a community-based platform connecting surplus food from
+            restaurants, households, and events with volunteers and NGOs to
+            efficiently distribute it to those in need.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <section id="about-section" class="content-section" style="display: none">
+      <div class="container text-center">
+        <h2>About FoodResQ</h2>
+        <p>
+          FoodResQ is a community-driven platform built to bridge the gap
+          between food waste and hunger. Our mission is to rescue surplus food
+          from restaurants, households, and events and redirect it to those in
+          need—safely and efficiently.
+        </p>
+        <p>
+          Developed by a passionate team of student developers, FoodResQ
+          empowers food donors and volunteers through a simple, intuitive
+          interface. Donors can post excess food with just a few clicks, while
+          nearby volunteers can view and pick up donations for timely delivery
+          to shelters, NGOs, or individuals.
+        </p>
+        <p>
+          We believe that no edible food should go to waste while people go
+          hungry. By leveraging technology for social good, FoodResQ aims to
+          create a more sustainable and compassionate society—one meal at a
+          time.
+        </p>
+        <div class="about-images">
+          <img src="/images/aboutus.jpeg" class="about-in-images" />
+          <img src="/images/aboutus2.webp" class="about-in-images" />
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="dashboard-section"
+      class="content-section"
+      style="display: none"
+    >
+      <div class="container text-center">
+        <h2 class="features-h2" style="text-align: center">
+          Community Impact Dashboard
+        </h2>
+        <div
+          class="total-food-saved"
+          style="text-align: center; margin-bottom: 30px"
+        >
+          <h3 style="color: #4caf50">
+            Total Food Saved: <span id="totalFoodSavedKg">0</span> kg
+          </h3>
+        </div>
+        <div class="donors-list">
+          <h3 style="text-align: center; margin-bottom: 20px">
+            Our Valued Donors
+          </h3>
+          <ul id="donorsList" style="list-style: none; padding: 0"></ul>
+        </div>
+      </div>
+    </section>
+
+    <footer id="main-footer">
+      <div class="container">
+        <p>&copy; 2025 FoodResQ. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- <script>
+      document
+        .getElementById("nav-aboutUs-btn")
+        .addEventListener("click", function () {
+          const aboutSection = document.getElementById("about-section");
+          const homeSection = document.getElementById("home-section");
+          const dashboardSection = document.getElementById("dashboard-section");
+
+          homeSection.style.display = "none";
+          dashboardSection.style.display = "none";
+          aboutSection.style.display = "block";
+
+          aboutSection.scrollIntoView({ behavior: "smooth" });
+        });
+      document
+        .getElementById("nav-dashboard-btn")
+        .addEventListener("click", function () {
+          const aboutSection = document.getElementById("about-section");
+          const homeSection = document.getElementById("home-section");
+          const dashboardSection = document.getElementById("dashboard-section");
+
+          homeSection.style.display = "none";
+          dashboardSection.style.display = "block";
+          aboutSection.style.display = "none";
+
+          aboutSection.scrollIntoView({ behavior: "smooth" });
+        });
+    </script> -->
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap"
+    ></script>
+    <!-- <script src="/index.js"></script> -->
+    <script src="/javascript/dashboard.js"></script>
+  </body>
+</html>

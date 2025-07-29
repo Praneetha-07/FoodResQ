@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donor Dashboard - FoodResQ</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="volun-donor-header">
+      <nav class="volun-donor-nav">
+        <button class="nav-button-vol-donor" data-target="submitDonation">
+          Submit Donation
+        </button>
+        <button class="nav-button-vol-donor" data-target="myDonations">
+          My Donations
+        </button>
+        <button class="nav-button-vol-donor" data-target="donorProfile">
+          Profile
+        </button>
+        <button class="nav-button-vol-donor" id="logout-donor">Logout</button>
+      </nav>
+    </header>
+
+    <h1
+      style="
+        text-align: center;
+        font-style: italic;
+        color: rgb(105, 105, 164);
+        font-size: 50px;
+      "
+    >
+      Welcome, Donor! <br />👋
+    </h1>
+
+    <section class="volun-donor-sec" style="margin: 35px; margin-bottom: 10px">
+      <p class="features-h2">Your Impact So Far</p>
+      <p style="font-size: 25px">
+        Total Donations Made: <span id="totalDonationsMade">0</span>
+      </p>
+      <p style="font-size: 25px">
+        Total Food Contributed: <span id="totalFoodContributed">0</span> kg
+      </p>
+    </section>
+
+    <main class="volun-donor-main">
+      <section id="submitDonation" class="volun-donor-sec">
+        <h2 class="features-h2">Submit a Food Donation</h2>
+        <form id="donationForm">
+          <label for="foodType"
+            >Food Type:
+            <input type="text" id="foodType" name="foodType" required /></label
+          ><br />
+          <label for="quantity"
+            >Quantity (kg):
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              required
+              min="0.1"
+              step="0.1" /></label
+          ><br />
+          <label for="address"
+            >Pickup Address:
+            <input
+              type="text"
+              id="donationAddress"
+              name="address"
+              required /></label
+          ><br />
+          <label for="readyUntilTime"
+            >Ready Until (Time):
+            <input
+              type="time"
+              id="readyUntilTime"
+              name="readyUntilTime"
+              required /></label
+          ><br />
+          <label for="readyUntilDate"
+            >Ready Until (Date - Optional):
+            <input
+              type="date"
+              id="readyUntilDate"
+              name="readyUntilDate" /></label
+          ><br />
+          <label for="imageUpload"
+            >Upload Image (Optional):
+            <input
+              type="file"
+              id="imageUpload"
+              name="imageUpload"
+              accept="image/*" /></label
+          ><br />
+          <label for="notes"
+            >Notes:
+            <textarea id="notes" name="notes" rows="3"></textarea></label
+          ><br />
+          <button type="submit">Submit Donation</button>
+        </form>
+      </section>
+
+      <section id="myDonations" class="volun-donor-sec">
+        <h2 class="features-h2">My Previous Donations</h2>
+        <div id="donationHistory"></div>
+      </section>
+
+      <section id="donorProfile" class="volun-donor-sec">
+        <h2 class="features-h2">My Profile</h2>
+        <form id="donorProfileForm">
+          <label for="donorName"
+            >Name:
+            <input
+              type="text"
+              id="donorName"
+              name="donorName"
+              value="Donor Name" /></label
+          ><br />
+          <label for="donorLocation"
+            >Location:
+            <input
+              type="text"
+              id="donorLocation"
+              name="donorLocation"
+              value="Guntur" /></label
+          ><br />
+          <label for="donorPhone"
+            >Phone:
+            <input
+              type="tel"
+              id="donorPhone"
+              name="donorPhone"
+              value="+91 9876543210" /></label
+          ><br />
+          <label for="donorOrg"
+            >Organization (Optional):
+            <input
+              type="text"
+              id="donorOrg"
+              name="donorOrg"
+              placeholder="e.g., ABC Corp." /></label
+          ><br />
+          <button type="submit">Update Profile</button>
+        </form>
+      </section>
+    </main>
+
+    <footer id="main-footer">
+      <div class="container">
+        <p>&copy; 2025 FoodResQ. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/javascript/donor.js"></script>
+  </body>
+</html>
