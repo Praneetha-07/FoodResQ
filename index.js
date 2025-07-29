@@ -44,11 +44,11 @@ app.get("/register", (req, res) => {
 });
 
 app.get("/vol-dashboard", (req, res) => {
-  res.sendFile(__dirname + "/views/volunteer.html");
+  res.sendFile(__dirname + "/Views/volunteer.html");
 });
 
 app.get("/Donor-dashboard", (req, res) => {
-  res.sendFile(__dirname + "/views/donor.html");
+  res.sendFile(__dirname + "/Views/donor.html");
 });
 
 app.listen(port, () => {
